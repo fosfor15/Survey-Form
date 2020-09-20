@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Fogm</title>
+</head>
+<body translate="no">
+    <header>
+        <h1 id="title">My own Survey Form</h1>
+        <p id="description">Be sure it is useful survey</p>
+    </header>
+    <div>
+        <form id="survey-form" target="_self">
+            <label for="name" id="name-label">Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name" required>
+            <label for="email" id="email-label">Email</label>
+            <!-- Add validation pattern for email -->
+            <input type="email" name="email" id="email" placeholder="Enter your email" required>
+            <label for="number" id="number-label">Age <span class="clue">(Optional)</span></label>
+            <input type="number" name="age" id="number" min="4" max="120" placeholder="Enter your age">
+    
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
