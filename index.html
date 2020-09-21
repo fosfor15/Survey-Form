@@ -7,20 +7,72 @@
 </head>
 <body translate="no">
     <header>
-        <h1 id="title">My own Survey Form</h1>
-        <p id="description">Be sure it is useful survey</p>
+        <h1 id="title">Your Pet Survey</h1>
+        <p id="description">Do you have a pet? &ndash; So we have a little survey)</p>
     </header>
     <div>
         <form id="survey-form" target="_self">
             <label for="name" id="name-label">Name</label>
-            <input type="text" name="name" id="name" placeholder="Enter your name" required>
+            <input type="text" name="name" id="name" placeholder="Enter pet's name" required>
+            
             <label for="email" id="email-label">Email</label>
             <!-- Add validation pattern for email -->
-            <input type="email" name="email" id="email" placeholder="Enter your email" required>
+            <input type="email" name="email" id="email" placeholder="Enter pet's email" required>
+            
             <label for="number" id="number-label">Age <span class="clue">(Optional)</span></label>
-            <input type="number" name="age" id="number" min="4" max="120" placeholder="Enter your age">
+            <input type="number" name="age" id="number" min="1" max="100" placeholder="Enter pet's age">
+            
+            <label for="dropdown">Kind of pet</label>
+            <select name="kind" id="dropdown" required>
+                <option value="none" selected disabled>Choose pet's kind?</option>
+                <option value="cat">&#128008; Cat</option>
+                <option value="dog">&#128021; Dog</option>
+                <option value="rabbit">&#128007; Rabbit</option>
+                <option value="mouse">&#128001; Mouse</option>
+                <option value="parrot">&#128038; Parrot</option>
+                <option value="horse">&#128052; Horse</option>
+                <option value="fish">&#128031; Fish</option>
+                <option value="pig">&#128022; Pig</option>
+                <option value="snail">&#128012; Snail</option>
+                <option value="turtle">&#128034; Turtle</option>
+                <option value="snake">&#128013; Snake</option>
+                <option value="scorpion">&#129410; Scorpion</option>
+                <option value="spider">&#128375; Spider</option>
+            </select>
+
+            <fieldset>
+                <legend>Choose pet's gender <span class="clue">(Optional)</span></legend>
+                <input type="radio" name="gender" id="gender-male" value="male">
+                <label for="gender-male">Male</label>
+                <input type="radio" name="gender" id="gender-female" value="female">
+                <label for="gender-female">Female</label>
+                <input type="radio" name="gender" id="gender-other" value="other">
+                <label for="gender-other">Other...</label>
+                <input type="radio" name="gender" id="gender-unknown" value="unknown">
+                <label for="gender-unknown">I don't know</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>What does your pet prefer the most?</legend>
+                <input type="checkbox" name="prefer-eat" id="prefer-eat" value="eat">
+                <label for="prefer-eat">Eat delicious food</label>
+                <input type="checkbox" name="prefer-sound" id="prefer-sound" value="sound">
+                <label for="prefer-sound">Make sounds</label>
+                <input type="checkbox" name="prefer-sleep" id="prefer-sleep" value="sleep">
+                <label for="prefer-sleep">Sleep </label>
+                <input type="checkbox" name="prefer-joy" id="prefer-joy" value="joy">
+                <label for="prefer-joy">Joy</label>
+                <input type="checkbox" name="prefer-work" id="prefer-work" value="work">
+                <label for="prefer-work">Work</label>
+                <input type="checkbox" name="prefer-earn" id="prefer-earn" value="earn">
+                <label for="prefer-earn">Earn money</label>
+            </fieldset>
+
+            <label for="add-info">Additional information <span class="clue">(Optional)</span></label>
+            <textarea name="add-info" id="add-info" cols="30" rows="10"
+                placeholder="Enter additional info here..."></textarea>
     
-            <input type="submit" value="Submit">
+            <input type="submit" id="submit" value="Submit">
         </form>
     </div>
 </body>
