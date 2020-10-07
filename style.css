@@ -7,13 +7,13 @@
 *::after {
     box-sizing: border-box;
 }
-
 body {
     margin: 0;
     background-image: url(
         "https://previews.123rf.com/images/naum100/naum1001503/naum100150300231/38158058-seamless-pet-pattern-hand-drawing-vector-.jpg");
     background-attachment: fixed;
 }
+
 
 #container {
     width: 720px;
@@ -23,6 +23,20 @@ body {
     box-shadow: 0px 0px 20px -5px rgb(10, 106, 109);
     border-radius: 8px;
 }
+@media screen and (max-width: 720px) {
+    #container {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 460px) {
+    #container {
+        width: 100%;
+        margin: 0;
+    }
+}
+
 
 /* Header */
 #survey-header {
@@ -37,34 +51,32 @@ body {
     text-shadow: 2px 2px 8px rgb(0, 37, 38);
 }
 #description {
-    margin: 0;
-    font-family: 'Kanit', sans-serif;
-    font-size: 24px;
-    font-weight: 500;
-    color: rgb(0, 127, 137);
+    margin: 10px 0 0 0;
+    font-family: 'Merienda One', cursive;
+    font-size: 22px;
+    color: rgb(15, 15, 15);
 }
 
 
-/* Form & Elements */
+/* Form */
 #survey-form {
     margin: 40px 0 20px 0;
 }
-
 .form-group {
     margin: 15px;
 }
 
-
-label {
-    display: block;
+.form-group > label {
+    display: block;    
     margin-bottom: 5px;
     font-family: 'Merienda One', cursive;
-    font-size: 18px;
+    font-size: 20px;
 }
 .clue {
     font-size: smaller;
     color: rgb(25, 25, 25);
 }
+
 .form-field {
     display: block;
     width: 100%;
@@ -73,27 +85,20 @@ label {
     border-radius: 3px;
 }
 .form-field,
-.form-field::placeholder {
+.form-field::placeholder,
+option {
     font-family: 'Kanit', sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
 }
 .form-field:focus {
     outline: none;
 }
 
-
 #dropdown {
     border: 2px solid #212121;
     cursor: pointer;
 }
-#dropdown,
-option {
-    font-family: 'Kanit', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-}
-
 
 fieldset {
     border: 2px solid #212121;
@@ -101,36 +106,29 @@ fieldset {
 }
 legend {
     font-family: 'Merienda One', cursive;
-    font-size: 18px;
+    font-size: 19px;
 }
 fieldset label {
+    display: block;
     font-family: 'Kanit', sans-serif;
-    font-weight: 500;
-    font-size: 18   px;
+    font-weight: 400;
+    font-size: 17px;
 }
-
 
 #add-info {
     width: 100%;
     height: 150px;
     margin: 0;
     padding: 10px;
-    resize: vertical;
     border: 2px solid #212121;
     border-radius: 3px;
+    resize: vertical;
 }
-#add-info,
-#add-info::placeholder {
-    font-family: 'Kanit', sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-}
-
 
 #submit {
     display: block;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 40px;
     padding: 10px;
     background-color: rgb(193, 255, 63);;
     border: 2px solid #212121;
